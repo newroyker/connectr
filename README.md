@@ -516,7 +516,7 @@ collect(df1)
 
 * output:
 ```
- debajyoti.roy@C02XD2NHJGH5  ~/Dev/connectr   master ●  Rscript dapply.R
+ debajyoti.roy@C02XD2NHJGH5  ~/Dev/connectr   master  Rscript dapply.R
 
 Attaching package: ‘SparkR’
 
@@ -530,13 +530,13 @@ The following objects are masked from ‘package:base’:
     rank, rbind, sample, startsWith, subset, summary, transform, union
 
 Spark package found in SPARK_HOME: /usr/local/lib/python2.7/site-packages/pyspark
-Launching java with spark-submit command /usr/local/lib/python2.7/site-packages/pyspark/bin/spark-submit   sparkr-shell /var/folders/qb/tgq8qgvj3n39jctc7pzhgq440000gp/T//RtmpHyuaWY/backend_port3e903ff5bc71
-19/02/20 11:34:10 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Launching java with spark-submit command /usr/local/lib/python2.7/site-packages/pyspark/bin/spark-submit   sparkr-shell /var/folders/qb/tgq8qgvj3n39jctc7pzhgq440000gp/T//RtmptAYEbq/backend_port112e22a543f7
+19/02/21 15:46:40 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
 Setting default log level to "WARN".
 To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
-19/02/20 11:34:11 WARN MetricsSystem: Using default name SparkStatusTracker for source because neither spark.metrics.namespace nor spark.app.id is set.
-19/02/20 11:34:19 WARN SparkServiceRPCClient: Now tracking server state for f840e5bd-c850-4ff2-b7fb-7ebb3370e115, invalidating prev state
+19/02/21 15:46:41 WARN MetricsSystem: Using default name SparkStatusTracker for source because neither spark.metrics.namespace nor spark.app.id is set.
+19/02/21 15:46:48 WARN SparkServiceRPCClient: Now tracking server state for 8c8115ff-0b9c-4db5-9cdd-1ad278185e04, invalidating prev state
 Java ref type org.apache.spark.sql.SparkSession id 1
 View job details at https://field-eng.cloud.databricks.com/?o=0#/setting/clusters/0211-191220-synod5/sparkUi
 Warning messages:
@@ -548,103 +548,156 @@ Warning messages:
   Use Petal_Length instead of Petal.Length  as column name
 4: In FUN(X[[i]], ...) :
   Use Petal_Width instead of Petal.Width  as column name
-19/02/20 11:34:21 ERROR RBackendHandler: dfToCols on org.apache.spark.sql.api.r.SQLUtils failed
-java.lang.reflect.InvocationTargetException
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.spark.api.r.RBackendHandler.handleMethodCall(RBackendHandler.scala:167)
-	at org.apache.spark.api.r.RBackendHandler.channelRead0(RBackendHandler.scala:108)
-	at org.apache.spark.api.r.RBackendHandler.channelRead0(RBackendHandler.scala:40)
-	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
-	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
-	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
-	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:310)
-	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:284)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
-	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:138)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
-	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.apache.spark.SparkException: This DataFrame operation is not currently supported by SQL service.
-
-Please add this operation to logical.proto and ProtoSerializer.scala.
-
-scala.MatchError: MapPartitionsInR [StructField(Sepal_Length,DoubleType,true), StructField(Sepal_Width,DoubleType,true), StructField(Petal_Length,DoubleType,true), StructField(Petal_Width,DoubleType,true), StructField(Species,StringType,true)], [StructField(Sepal_Length,DoubleType,true), StructField(Sepal_Width,DoubleType,true), StructField(Petal_Length,DoubleType,true), StructField(Petal_Width,DoubleType,true), StructField(Species,StringType,true)], obj#21: org.apache.spark.sql.Row
-+- DeserializeToObject createexternalrow(Sepal_Length#5, Sepal_Width#6, Petal_Length#7, Petal_Width#8, Species#9.toString, StructField(Sepal_Length,DoubleType,true), StructField(Sepal_Width,DoubleType,true), StructField(Petal_Length,DoubleType,true), StructField(Petal_Width,DoubleType,true), StructField(Species,StringType,true)), obj#15: org.apache.spark.sql.Row
-   +- LogicalRDD [Sepal_Length#5, Sepal_Width#6, Petal_Length#7, Petal_Width#8, Species#9], false
- (of class org.apache.spark.sql.catalyst.plans.logical.MapPartitionsInR)
-
-	at org.apache.spark.sql.util.ProtoSerializer.serializePlan(ProtoSerializer.scala:299)
-	at org.apache.spark.sql.util.ProtoSerializer.serializePlan0(ProtoSerializer.scala:529)
-	at org.apache.spark.sql.util.ProtoSerializer$$anonfun$4.apply(ProtoSerializer.scala:290)
-	at org.apache.spark.sql.util.ProtoSerializer$$anonfun$4.apply(ProtoSerializer.scala:290)
-	at org.apache.spark.sql.util.ProtoSerializer.withTopLevel(ProtoSerializer.scala:277)
-	at org.apache.spark.sql.util.ProtoSerializer.serializePlan(ProtoSerializer.scala:289)
-	at com.databricks.service.SparkServiceRPCClientStub$$anonfun$executePlan$1.apply(SparkServiceRPCClientStub.scala:212)
-	at com.databricks.service.SparkServiceRPCClientStub$$anonfun$executePlan$1.apply(SparkServiceRPCClientStub.scala:211)
-	at com.databricks.spark.util.Log4jUsageLogger.recordOperation(UsageLogger.scala:156)
-	at com.databricks.spark.util.UsageLogging$class.recordOperation(UsageLogger.scala:281)
-	at com.databricks.service.SparkServiceRPCClientStub.recordOperation(SparkServiceRPCClientStub.scala:47)
-	at com.databricks.service.SparkServiceRPCClientStub.executePlan(SparkServiceRPCClientStub.scala:211)
-	at com.databricks.service.RemoteServiceExec.computeResult(RemoteServiceExec.scala:241)
-	at com.databricks.service.RemoteServiceExec.executeCollect(RemoteServiceExec.scala:272)
-	at org.apache.spark.sql.execution.collect.Collector$.collect(Collector.scala:56)
-	at org.apache.spark.sql.execution.collect.Collector$.collect(Collector.scala:75)
-	at org.apache.spark.sql.execution.ResultCacheManager.getOrComputeResult(ResultCacheManager.scala:46)
-	at org.apache.spark.sql.execution.ResultCacheManager.getOrComputeResult(ResultCacheManager.scala:39)
-	at org.apache.spark.sql.execution.SparkPlan.executeCollectResult(SparkPlan.scala:312)
-	at org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$collectResult(Dataset.scala:2827)
-	at org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$collectFromPlan(Dataset.scala:3439)
-	at org.apache.spark.sql.Dataset$$anonfun$collect$1.apply(Dataset.scala:2794)
-	at org.apache.spark.sql.Dataset$$anonfun$collect$1.apply(Dataset.scala:2794)
-	at org.apache.spark.sql.Dataset$$anonfun$54.apply(Dataset.scala:3423)
-	at org.apache.spark.sql.execution.SQLExecution$$anonfun$withCustomExecutionEnv$1.apply(SQLExecution.scala:99)
-	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:228)
-	at org.apache.spark.sql.execution.SQLExecution$.withCustomExecutionEnv(SQLExecution.scala:85)
-	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:158)
-	at org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$withAction(Dataset.scala:3422)
-	at org.apache.spark.sql.Dataset.collect(Dataset.scala:2794)
-	at org.apache.spark.sql.api.r.SQLUtils$.dfToCols(SQLUtils.scala:181)
-	at org.apache.spark.sql.api.r.SQLUtils.dfToCols(SQLUtils.scala)
-	... 36 more
-Caused by: scala.MatchError: MapPartitionsInR [StructField(Sepal_Length,DoubleType,true), StructField(Sepal_Width,DoubleType,true), StructField(Petal_Length,DoubleType,true), StructField(Petal_Width,DoubleType,true), StructField(Species,StringType,true)], [StructField(Sepal_Length,DoubleType,true), StructField(Sepal_Width,DoubleType,true), StructField(Petal_Length,DoubleType,true), StructField(Petal_Width,DoubleType,true), StructField(Species,StringType,true)], obj#21: org.apache.spark.sql.Row
-+- DeserializeToObject createexternalrow(Sepal_Length#5, Sepal_Width#6, Petal_Length#7, Petal_Width#8, Species#9.toString, StructField(Sepal_Length,DoubleType,true), StructField(Sepal_Width,DoubleType,true), StructField(Petal_Length,DoubleType,true), StructField(Petal_Width,DoubleType,true), StructField(Species,StringType,true)), obj#15: org.apache.spark.sql.Row
-   +- LogicalRDD [Sepal_Length#5, Sepal_Width#6, Petal_Length#7, Petal_Width#8, Species#9], false
- (of class org.apache.spark.sql.catalyst.plans.logical.MapPartitionsInR)
-	at org.apache.spark.sql.util.ProtoSerializer.serializePlan0(ProtoSerializer.scala:322)
-	at org.apache.spark.sql.util.ProtoSerializer$$anonfun$4.apply(ProtoSerializer.scala:290)
-	at org.apache.spark.sql.util.ProtoSerializer$$anonfun$4.apply(ProtoSerializer.scala:290)
-	at org.apache.spark.sql.util.ProtoSerializer.withTopLevel(ProtoSerializer.scala:277)
-	at org.apache.spark.sql.util.ProtoSerializer.serializePlan(ProtoSerializer.scala:289)
-	... 67 more
-Error in handleErrors(returnStatus, conn) :
-  org.apache.spark.SparkException: This DataFrame operation is not currently supported by SQL service.
-
-Please add this operation to logical.proto and ProtoSerializer.scala.
-
-scala.MatchError: MapPartitionsInR [StructField(Sepal_Length,DoubleType,true), StructField(Sepal_Width,DoubleType,true), StructField(Petal_Length,DoubleType,true), StructField(Petal_Width,DoubleType,true), StructField(Species,StringType,true)], [StructField(Sepal_Length,DoubleType,true), StructField(Sepal_Width,DoubleType,true), StructField(Petal_Length,DoubleType,true), StructField(Petal_Width,DoubleType,true), StructField(Species,StringType,true)], obj#21: org.apache.spark.sql.Row
-+- DeserializeToObject createexternalrow(Sepal_Length#5, Sepal_Width#6, Petal_Length#7, Petal_Width#8, Species#9.toString, StructField(Sepal_Length,DoubleType,true), StructField(Sepal_Width,DoubleType,true), StructField(Petal_Length,DoubleType,true), StructField(Petal_Width,DoubleType,true), StructField(Species,StringType,true)
-Calls: collect ... .local -> callJStatic -> invokeJava -> handleErrors
-Execution halted
+View job details at https://field-eng.cloud.databricks.com/?o=0#/setting/clusters/0211-191220-synod5/sparkUi
+[Stage 4:>                                                          (0 + 1) / 1]    Sepal_Length Sepal_Width Petal_Length Petal_Width    Species
+1            5.1         3.5          1.4         0.2     setosa
+2            4.9         3.0          1.4         0.2     setosa
+3            4.7         3.2          1.3         0.2     setosa
+4            4.6         3.1          1.5         0.2     setosa
+5            5.0         3.6          1.4         0.2     setosa
+6            5.4         3.9          1.7         0.4     setosa
+7            4.6         3.4          1.4         0.3     setosa
+8            5.0         3.4          1.5         0.2     setosa
+9            4.4         2.9          1.4         0.2     setosa
+10           4.9         3.1          1.5         0.1     setosa
+11           5.4         3.7          1.5         0.2     setosa
+12           4.8         3.4          1.6         0.2     setosa
+13           4.8         3.0          1.4         0.1     setosa
+14           4.3         3.0          1.1         0.1     setosa
+15           5.8         4.0          1.2         0.2     setosa
+16           5.7         4.4          1.5         0.4     setosa
+17           5.4         3.9          1.3         0.4     setosa
+18           5.1         3.5          1.4         0.3     setosa
+19           5.7         3.8          1.7         0.3     setosa
+20           5.1         3.8          1.5         0.3     setosa
+21           5.4         3.4          1.7         0.2     setosa
+22           5.1         3.7          1.5         0.4     setosa
+23           4.6         3.6          1.0         0.2     setosa
+24           5.1         3.3          1.7         0.5     setosa
+25           4.8         3.4          1.9         0.2     setosa
+26           5.0         3.0          1.6         0.2     setosa
+27           5.0         3.4          1.6         0.4     setosa
+28           5.2         3.5          1.5         0.2     setosa
+29           5.2         3.4          1.4         0.2     setosa
+30           4.7         3.2          1.6         0.2     setosa
+31           4.8         3.1          1.6         0.2     setosa
+32           5.4         3.4          1.5         0.4     setosa
+33           5.2         4.1          1.5         0.1     setosa
+34           5.5         4.2          1.4         0.2     setosa
+35           4.9         3.1          1.5         0.2     setosa
+36           5.0         3.2          1.2         0.2     setosa
+37           5.5         3.5          1.3         0.2     setosa
+38           4.9         3.6          1.4         0.1     setosa
+39           4.4         3.0          1.3         0.2     setosa
+40           5.1         3.4          1.5         0.2     setosa
+41           5.0         3.5          1.3         0.3     setosa
+42           4.5         2.3          1.3         0.3     setosa
+43           4.4         3.2          1.3         0.2     setosa
+44           5.0         3.5          1.6         0.6     setosa
+45           5.1         3.8          1.9         0.4     setosa
+46           4.8         3.0          1.4         0.3     setosa
+47           5.1         3.8          1.6         0.2     setosa
+48           4.6         3.2          1.4         0.2     setosa
+49           5.3         3.7          1.5         0.2     setosa
+50           5.0         3.3          1.4         0.2     setosa
+51           7.0         3.2          4.7         1.4 versicolor
+52           6.4         3.2          4.5         1.5 versicolor
+53           6.9         3.1          4.9         1.5 versicolor
+54           5.5         2.3          4.0         1.3 versicolor
+55           6.5         2.8          4.6         1.5 versicolor
+56           5.7         2.8          4.5         1.3 versicolor
+57           6.3         3.3          4.7         1.6 versicolor
+58           4.9         2.4          3.3         1.0 versicolor
+59           6.6         2.9          4.6         1.3 versicolor
+60           5.2         2.7          3.9         1.4 versicolor
+61           5.0         2.0          3.5         1.0 versicolor
+62           5.9         3.0          4.2         1.5 versicolor
+63           6.0         2.2          4.0         1.0 versicolor
+64           6.1         2.9          4.7         1.4 versicolor
+65           5.6         2.9          3.6         1.3 versicolor
+66           6.7         3.1          4.4         1.4 versicolor
+67           5.6         3.0          4.5         1.5 versicolor
+68           5.8         2.7          4.1         1.0 versicolor
+69           6.2         2.2          4.5         1.5 versicolor
+70           5.6         2.5          3.9         1.1 versicolor
+71           5.9         3.2          4.8         1.8 versicolor
+72           6.1         2.8          4.0         1.3 versicolor
+73           6.3         2.5          4.9         1.5 versicolor
+74           6.1         2.8          4.7         1.2 versicolor
+75           6.4         2.9          4.3         1.3 versicolor
+76           6.6         3.0          4.4         1.4 versicolor
+77           6.8         2.8          4.8         1.4 versicolor
+78           6.7         3.0          5.0         1.7 versicolor
+79           6.0         2.9          4.5         1.5 versicolor
+80           5.7         2.6          3.5         1.0 versicolor
+81           5.5         2.4          3.8         1.1 versicolor
+82           5.5         2.4          3.7         1.0 versicolor
+83           5.8         2.7          3.9         1.2 versicolor
+84           6.0         2.7          5.1         1.6 versicolor
+85           5.4         3.0          4.5         1.5 versicolor
+86           6.0         3.4          4.5         1.6 versicolor
+87           6.7         3.1          4.7         1.5 versicolor
+88           6.3         2.3          4.4         1.3 versicolor
+89           5.6         3.0          4.1         1.3 versicolor
+90           5.5         2.5          4.0         1.3 versicolor
+91           5.5         2.6          4.4         1.2 versicolor
+92           6.1         3.0          4.6         1.4 versicolor
+93           5.8         2.6          4.0         1.2 versicolor
+94           5.0         2.3          3.3         1.0 versicolor
+95           5.6         2.7          4.2         1.3 versicolor
+96           5.7         3.0          4.2         1.2 versicolor
+97           5.7         2.9          4.2         1.3 versicolor
+98           6.2         2.9          4.3         1.3 versicolor
+99           5.1         2.5          3.0         1.1 versicolor
+100          5.7         2.8          4.1         1.3 versicolor
+101          6.3         3.3          6.0         2.5  virginica
+102          5.8         2.7          5.1         1.9  virginica
+103          7.1         3.0          5.9         2.1  virginica
+104          6.3         2.9          5.6         1.8  virginica
+105          6.5         3.0          5.8         2.2  virginica
+106          7.6         3.0          6.6         2.1  virginica
+107          4.9         2.5          4.5         1.7  virginica
+108          7.3         2.9          6.3         1.8  virginica
+109          6.7         2.5          5.8         1.8  virginica
+110          7.2         3.6          6.1         2.5  virginica
+111          6.5         3.2          5.1         2.0  virginica
+112          6.4         2.7          5.3         1.9  virginica
+113          6.8         3.0          5.5         2.1  virginica
+114          5.7         2.5          5.0         2.0  virginica
+115          5.8         2.8          5.1         2.4  virginica
+116          6.4         3.2          5.3         2.3  virginica
+117          6.5         3.0          5.5         1.8  virginica
+118          7.7         3.8          6.7         2.2  virginica
+119          7.7         2.6          6.9         2.3  virginica
+120          6.0         2.2          5.0         1.5  virginica
+121          6.9         3.2          5.7         2.3  virginica
+122          5.6         2.8          4.9         2.0  virginica
+123          7.7         2.8          6.7         2.0  virginica
+124          6.3         2.7          4.9         1.8  virginica
+125          6.7         3.3          5.7         2.1  virginica
+126          7.2         3.2          6.0         1.8  virginica
+127          6.2         2.8          4.8         1.8  virginica
+128          6.1         3.0          4.9         1.8  virginica
+129          6.4         2.8          5.6         2.1  virginica
+130          7.2         3.0          5.8         1.6  virginica
+131          7.4         2.8          6.1         1.9  virginica
+132          7.9         3.8          6.4         2.0  virginica
+133          6.4         2.8          5.6         2.2  virginica
+134          6.3         2.8          5.1         1.5  virginica
+135          6.1         2.6          5.6         1.4  virginica
+136          7.7         3.0          6.1         2.3  virginica
+137          6.3         3.4          5.6         2.4  virginica
+138          6.4         3.1          5.5         1.8  virginica
+139          6.0         3.0          4.8         1.8  virginica
+140          6.9         3.1          5.4         2.1  virginica
+141          6.7         3.1          5.6         2.4  virginica
+142          6.9         3.1          5.1         2.3  virginica
+143          5.8         2.7          5.1         1.9  virginica
+144          6.8         3.2          5.9         2.3  virginica
+145          6.7         3.3          5.7         2.5  virginica
+146          6.7         3.0          5.2         2.3  virginica
+147          6.3         2.5          5.0         1.9  virginica
+148          6.5         3.0          5.2         2.0  virginica
+149          6.2         3.4          5.4         2.3  virginica
+150          5.9         3.0          5.1         1.8  virginica
 ```
