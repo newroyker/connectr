@@ -2,7 +2,7 @@
 
 Sys.setenv(SPARK_HOME='/usr/local/lib/python2.7/site-packages/pyspark')
 
-assign("DATABRICKS_GUID", 'e9022058-976d-4432-ad52-97b9465bcfff', envir = .GlobalEnv)
+assign("DATABRICKS_GUID", '50aaf25a-5f54-4502-ba5e-22dfaaf688f4', envir = .GlobalEnv)
 
 .libPaths(c(file.path('/Users/debajyoti.roy/Downloads/spark-2.4.0-bin-hadoop2.7', 'R', 'lib'), .libPaths()))
 

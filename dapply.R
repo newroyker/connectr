@@ -8,12 +8,6 @@ library(SparkR)
 
 sparkR.session()
 
-head(iris)
-
 df <- createDataFrame(iris)
-
-showDF(df)
-
-c <- collect(df)
-
-head(c)
+df1 <- dapply(df, function(x) { x }, schema(df))
+collect(df1)
