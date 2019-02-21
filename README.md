@@ -1,7 +1,7 @@
 # Setup:
-* custom:custom-local__5.2.x-rc-scala2.11__dev__head__4816590__bb5e408__dbr5.2x__41180b4__format-2.lz4
+* custom:custom-local__5.2.x-rc-scala2.11__dev__head__4816590__557dc2a__dbr5.2x__d5c928f__format-2.lz4
 * Client package (pip install -U databricks-connect-5.2.1.post2.tar.gz)
-https://drive.google.com/open?id=16NDhjSaTRaXKp1rZXH8NOO-2X697qdFu
+https://drive.google.com/open?id=1ArXc38DeLF28bKFpVGTAoResqEXYHB_6
 
 ## SparkR script with `spark.glm`
 ```
